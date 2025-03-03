@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>音频播放页面</title>
+    <title>CSTF-SENet: A Single-Channel Speech Enhancement Model with Cross-Scale Time-Frequency Transformer</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -19,7 +19,7 @@
 </head>
 <body>
 
-    <h1>点击按钮播放音频</h1>
+    <h1>CSTF-SENet: A Single-Channel Speech Enhancement Model with Cross-Scale Time-Frequency Transformer</h1>
 
     <!-- 显示PNG图 -->
     <div class="image-container">
@@ -41,6 +41,99 @@
             "audio/noisy1.wav",
             "audio/Metric1.wav",
             "audio/CSTF1.wav"
+        ];
+
+        // 播放音频的函数
+        function playAudio(index) {
+            const audio = new Audio(audioFiles[index - 1]);
+            audio.play();
+            console.log(`播放音频 ${index}`);
+        }
+    </script>
+
+
+
+    <!-- 显示PNG图 -->
+    <div class="image-container">
+        <img src="audio/spectrum2.png" alt="示例图片" width="800">
+    </div>
+
+    <!-- 按钮和音频播放 -->
+    <div class="audio-player">
+        <button onclick="playAudio(5)">Clean</button>
+        <button onclick="playAudio(6)">Noisy</button>
+        <button onclick="playAudio(7)">MetricGAN+</button>
+        <button onclick="playAudio(8)">CSTFSENet</button>
+    </div>
+
+    <script>
+        // 音频文件路径
+        const audioFiles = [
+            "audio/clean2.wav",  // 替换为你的音频文件路径
+            "audio/noisy2.wav",
+            "audio/Metric2.wav",
+            "audio/CSTF2.wav"
+        ];
+
+        // 播放音频的函数
+        function playAudio(index) {
+            const audio = new Audio(audioFiles[index - 1]);
+            audio.play();
+            console.log(`播放音频 ${index}`);
+        }
+    </script>
+
+
+    <!-- 显示PNG图 -->
+    <div class="image-container">
+        <img src="audio/spectrum3.png" alt="示例图片" width="800">
+    </div>
+
+    <!-- 按钮和音频播放 -->
+    <div class="audio-player">
+        <button onclick="playAudio(9)">Clean</button>
+        <button onclick="playAudio(10)">Noisy</button>
+        <button onclick="playAudio(11)">MetricGAN+</button>
+        <button onclick="playAudio(12)">CSTFSENet</button>
+    </div>
+
+    <script>
+        // 音频文件路径
+        const audioFiles = [
+            "audio/clean3.wav",  // 替换为你的音频文件路径
+            "audio/noisy3.wav",
+            "audio/Metric3.wav",
+            "audio/CSTF3.wav"
+        ];
+
+        // 播放音频的函数
+        function playAudio(index) {
+            const audio = new Audio(audioFiles[index - 1]);
+            audio.play();
+            console.log(`播放音频 ${index}`);
+        }
+    </script>
+
+    <!-- 显示PNG图 -->
+    <div class="image-container">
+        <img src="audio/spectrum4.png" alt="示例图片" width="800">
+    </div>
+
+    <!-- 按钮和音频播放 -->
+    <div class="audio-player">
+        <button onclick="playAudio(13)">Clean</button>
+        <button onclick="playAudio(14)">Noisy</button>
+        <button onclick="playAudio(15)">MetricGAN+</button>
+        <button onclick="playAudio(16)">CSTFSENet</button>
+    </div>
+
+    <script>
+        // 音频文件路径
+        const audioFiles = [
+            "audio/clean4.wav",  // 替换为你的音频文件路径
+            "audio/noisy4.wav",
+            "audio/Metric4.wav",
+            "audio/CSTF4.wav"
         ];
 
         // 播放音频的函数
