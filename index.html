@@ -4,17 +4,53 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>音频播放页面</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+        .audio-player {
+            margin-top: 20px;
+        }
+        .image-container {
+            margin-top: 50px;
+        }
+    </style>
 </head>
 <body>
 
-    <h1>欢迎来到我的音频播放页面</h1>
-    
-    <p>点击下方按钮播放音频：</p>
-    
-    <audio controls>
-        <source src="audio/noisy1.wav" type="audio/mpeg">
-        您的浏览器不支持音频播放。
-    </audio>
+    <h1>点击按钮播放音频</h1>
+
+    <!-- 显示PNG图 -->
+    <div class="image-container">
+        <img src="audio/spectrum1.png" alt="示例图片" width="300">
+    </div>
+
+    <!-- 按钮和音频播放 -->
+    <div class="audio-player">
+        <button onclick="playAudio(1)">播放音频 1</button>
+        <button onclick="playAudio(2)">播放音频 2</button>
+        <button onclick="playAudio(3)">播放音频 3</button>
+        <button onclick="playAudio(4)">播放音频 4</button>
+    </div>
+
+    <script>
+        // 音频文件路径
+        const audioFiles = [
+            "audio/clean1.wav",  // 替换为你的音频文件路径
+            "audio/noisy1.wav",
+            "audio/MetricGAN+.wav",
+            "audio/CSTFSENet.wav"
+        ];
+
+        // 播放音频的函数
+        function playAudio(index) {
+            const audio = new Audio(audioFiles[index - 1]);
+            audio.play();
+            console.log(`播放音频 ${index}`);
+        }
+    </script>
 
 </body>
 </html>
+
